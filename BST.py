@@ -36,22 +36,22 @@ class BstNode:
                     return
             self.right.delete(key)
         else:
-            t = self.right
-            m = self
+            temp = self.right
+            prev_node = self
             k = 0
-            while t.left!=None:
+            while temp.left!=None:
                 if k==0:
-                    m=m.right
+                    prev_node=prev_node.right
                     k+=1
                 else:
-                    m=m.left
+                    prev_node=prev_node.left
                     k+=1
-                t=t.left
-            self.key = t.key
+                temp=temp.left
+            self.key = temp.key
             if k>0:
-                m.left=t.right
+                prev_node.left=temp.right
             else:
-                m.right=t.right
+                prev_node.right=temp.right
 
 
     def display(self):
