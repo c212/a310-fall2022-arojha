@@ -36,22 +36,42 @@ class BstNode:
                     return
             self.right.delete(key)
         else:
-            temp = self.right
-            prev_node = self
-            k = 0
-            while temp.left!=None:
-                if k==0:
-                    prev_node=prev_node.right
-                    k+=1
+            if self.right!=None:
+                temp = self.right
+                prev_node = self
+                k = 0
+                while temp.left!=None:
+                    if k==0:
+                        prev_node=prev_node.right
+                        k+=1
+                    else:
+                        prev_node=prev_node.left
+                        k+=1
+                    temp=temp.left
+                self.key = temp.key
+                if k>0:
+                    prev_node.left=temp.right
                 else:
-                    prev_node=prev_node.left
-                    k+=1
-                temp=temp.left
-            self.key = temp.key
-            if k>0:
-                prev_node.left=temp.right
+                    prev_node.right=temp.right
+            elif self.left!=None:
+                temp = self.left
+                prev_node = self
+                k = 0
+                while temp.right!=None:
+                    if k==0:
+                        prev_node=prev_node.left
+                        k+=1
+                    else:
+                        prev_node=prev_node.right
+                        k+=1
+                    temp=temp.right
+                self.key = temp.key
+                if k>0:
+                    prev_node.right=temp.left
+                else:
+                    prev_node.left=temp.left
             else:
-                prev_node.right=temp.right
+                print("You are root, can't delete last node")
 
 
     def display(self):
@@ -130,8 +150,24 @@ b.insert(14)
 
 b.display()
 b.delete(2)
+b.delete(15)
 b.display()
-
+b.delete(17)
+b.display()
+b.delete(14)
+b.display()
+b.delete(13)
+b.display()
+b.delete(12)
+b.display()
+b.delete(8)
+b.display()
+b.delete(7)
+b.display()
+b.delete(10)
+b.display()
+b.delete(5)
+b.display()
 
 # The math and calculations in this problem are extremely well refined, reverse engineering this code would
 # most likely lead to a longer run time and less efficient code.
