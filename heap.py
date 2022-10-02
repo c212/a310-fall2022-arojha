@@ -1,4 +1,3 @@
-
 class heap:
     def __init__(self,arr):
         self.hp = arr
@@ -21,6 +20,17 @@ class heap:
                 elif self.hp[2*pos+1]>self.hp[2*pos+2]:
                     if self.hp[pos]>self.hp[2*pos+2]:
                         self.hp[pos],self.hp[2*pos+2] = self.hp[2*pos+2],self.hp[pos]  
+    def insert(self,val):
+        self.hp.append(val)
+        self.l+=1
+        self.min_heap()
+    def delete(self):
+        k = self.hp[0]
+        print("deleting {}".format(k))
+        self.hp[0] = self.hp[-1]
+        del self.hp[-1]
+        self.l-=1
+        self.min_heap()
     def min_heap(self):
         i = len(self.hp)//2
         for _ in range(i):
@@ -30,10 +40,21 @@ class heap:
                 self.heapify(i)
                 i-=1
 
-arr  = [9,4,7,3,15,22,100,1]
+arr  = [9]
 d = heap(arr)
 print(d.hp)
-print(d.leaf_node(4))
-d.min_heap()
+# indert elements
+d.insert(4)
+d.insert(7)
+d.insert(3)
+d.insert(15)
+d.insert(22)
+d.insert(100)
+d.insert(1)
 print(d.hp)
 
+#delete elements
+d.delete()
+print(d.hp)
+d.delete()
+print(d.hp)
