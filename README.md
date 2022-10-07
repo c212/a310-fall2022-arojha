@@ -4,6 +4,6 @@ Homework 07 help
 1.  [problem 1](https://github.com/c212/a310-fall2022-dgerman/blob/main/homework/hw07/mergeSort.py)  
 2.  [problem 2](https://legacy.cs.indiana.edu/classes/a310-dgerman/fall2022/hw07.html)  
 3.  [problem 3](https://github.com/c212/a310-fall2022-grmack/blob/main/1007/BST.py)  
-4.  [problem 4](https://github.com/c212/a310-fall2022-dgerman/blob/main/homework/hw07/five.py)  
-5.  [problem 5](https://legacy.cs.indiana.edu/classes/a310-dgerman/fall2022/whatsnew.html)  
+4.  [problem 4](https://legacy.cs.indiana.edu/classes/a310-dgerman/fall2022/whatsnew.html)  
+5.  [problem 5](https://github.com/c212/a310-fall2022-dgerman/blob/main/homework/hw07/five.py) 
 6.  [problem 6](https://github.com/c212/a310-fall2022-grmack/blob/main/1007/LinkedList.py) 
