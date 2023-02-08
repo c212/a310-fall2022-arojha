@@ -16,7 +16,7 @@ public class eva {
                 if(Math.abs(prev-next)<0.05 ){
                         return next;
                 }
-                else{  System.out.println(next+" "+prev+" "+(next+(orig/next)/2));
+                else{  
                         return sqrtt(next,(next+(orig/next))/2,orig);
                 }
 }
